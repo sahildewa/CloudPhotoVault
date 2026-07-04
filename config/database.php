@@ -1,14 +1,15 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "cloudphotovault_db";
+$conn = mysqli_connect(
+    "couldvault-db.cexucy2800ca.us-east-1.rds.amazonaws.com",
+    "sahil",
+    "sahil9870",
+    "coulddatabase"
+);
 
-$conn = mysqli_connect($host, $user, $password, $database);
-
-if(!$conn){
-    die("Connection Failed");
+if (!$conn)
+{
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 ?>
