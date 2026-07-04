@@ -1,0 +1,215 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#f2f4f8;
+}
+
+.container{
+    width:420px;
+    margin:120px auto;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+h1{
+    color:#2563eb;
+}
+
+p{
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#0f172a;
+
+    color:white;
+
+}
+
+/* ---------- HOME PAGE ---------- */
+
+.container{
+
+    width:500px;
+
+    margin:120px auto;
+
+    background:#1e293b;
+
+    padding:45px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 0 25px rgba(0,0,0,.35);
+
+}
+
+.container h1{
+
+    margin-bottom:20px;
+
+    font-size:40px;
+
+}
+
+.container p{
+
+    margin:15px 0;
+
+    color:#cbd5e1;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:13px 28px;
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ---------- LOGIN PAGE ---------- */
+
+.login-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+}
+
+.login-card{
+
+    background:#1e293b;
+
+    width:420px;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 0 25px rgba(0,0,0,.4);
+
+}
+
+.login-card h1{
+
+    margin-bottom:15px;
+
+}
+
+.login-card h2{
+
+    margin-bottom:30px;
+
+    color:#cbd5e1;
+
+    font-size:20px;
+
+}
+
+.login-card input{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+.login-card button{
+
+    width:100%;
+
+    padding:14px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+.login-card button:hover{
+
+    background:#1d4ed8;
+
+}
+
+.login-card a{
+
+    display:block;
+
+    margin-top:20px;
+
+    color:#60a5fa;
+
+    text-decoration:none;
+
+}
