@@ -54,7 +54,7 @@ while($row = mysqli_fetch_assoc($result))
 
 <div class="card">
 
-<img src="uploads/<?php echo $row['filename']; ?>">
+<img src="https://sahil-cloudphotovault.s3.us-east-1.amazonaws.com/<?php echo $row['filename']; ?>" alt="<?php echo $row['original_name']; ?>">
 
 <p><?php echo $row['original_name']; ?></p>
 

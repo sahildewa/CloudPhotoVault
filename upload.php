@@ -1,5 +1,16 @@
 <?php
+
+require 'vendor/autoload.php';
+
+use Aws\S3\S3Client;
+use Aws\Exception\AwsException;
+
 include("config/database.php");
+
+$s3 = new S3Client([
+    'version' => 'latest',
+    'region'  => 'us-east-1'
+]);
 
 $message = "";
 
@@ -28,25 +39,32 @@ if (isset($_POST['upload']))
         // Generate unique filename
         $newFileName = uniqid("img_", true) . "." . $fileExtension;
 
-        $destination = "uploads/" . $newFileName;
-
-        if (move_uploaded_file($tempName, $destination))
-{
-    $sql = "INSERT INTO images (filename, original_name)
-            VALUES ('$newFileName', '$fileName')";
-
-    if (mysqli_query($conn, $sql))
-{
-    $message = "✅ Image uploaded and saved to database!";
-}
-else
-{
-    $message = "❌ Database Error: " . mysqli_error($conn);
-}
-}
-        else
+        try
         {
-            $message = "❌ Upload failed!";
+            // Upload image to Amazon S3
+            $s3->putObject([
+                'Bucket' => 'sahil-cloudphotovault',
+                'Key' => $newFileName,
+                'SourceFile' => $tempName,
+                'ContentType' => mime_content_type($tempName)
+            ]);
+
+            // Save filename in RDS
+            $sql = "INSERT INTO images (filename, original_name)
+                    VALUES ('$newFileName', '$fileName')";
+
+            if (mysqli_query($conn, $sql))
+            {
+                $message = "✅ Image uploaded successfully to Amazon S3!";
+            }
+            else
+            {
+                $message = "❌ Database Error: " . mysqli_error($conn);
+            }
+        }
+        catch (AwsException $e)
+        {
+            $message = "❌ S3 Upload Failed: " . $e->getAwsErrorMessage();
         }
     }
 }
