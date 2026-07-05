@@ -128,7 +128,7 @@ Display Images in Gallery<br><br>
 <h3>Amazon EC2</h3>
 •EC2 Instance
 
-![EC2 Instance](assets/ec2/instance.png)
+![EC2 Instance](assets/ec2/Instance.png)
 
 •EC2 Session Manager
 ![alt text](assets/ec2/session-manager.png)
