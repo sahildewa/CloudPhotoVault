@@ -229,3 +229,13 @@ Open the EC2 Public IP in your web browser.
 ## Conclusion
 
 Cloud PhotoVault demonstrates the deployment of a PHP-based web application on AWS using Amazon EC2, Amazon RDS, and Amazon S3. The project showcases secure cloud storage, database integration, IAM Role-based authentication, and cloud networking within an Amazon VPC. It highlights practical implementation of core AWS services while following a scalable and secure cloud architecture suitable for modern web applications.
+
+## Author
+
+**Sahil Dewan**
+
+B.Sc. Information Technology
+
+Aspiring AWS Solutions Architect
+
+Built using AWS Free Tier for hands-on cloud learning.
